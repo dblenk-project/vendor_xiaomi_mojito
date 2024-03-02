@@ -213,6 +213,13 @@ dex_import {
 }
 
 dex_import {
+	name: "com.fingerprints.extension",
+	owner: "xiaomi",
+	jars: ["proprietary/vendor/framework/com.fingerprints.extension.jar"],
+	soc_specific: true,
+}
+
+dex_import {
 	name: "audiosphere",
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/audiosphere.jar"],
@@ -266,6 +273,15 @@ dex_import {
 	owner: "xiaomi",
 	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar"],
 	system_ext_specific: true,
+}
+
+prebuilt_etc_xml {
+	name: "android.hardware.biometrics.fingerprint@2.1-service.mojito",
+	owner: "xiaomi",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.biometrics.fingerprint@2.1-service.mojito.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
 }
 
 prebuilt_etc_xml {
